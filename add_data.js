@@ -60,7 +60,10 @@ module.exports = function profile(){
         // all we have to do is set the properties that we care
         // about and then cal save() on the user object:
         //req.user.customData.item=[];
-        req.user.customData.item.push([form.data.activity,form.data.location,form.data.time1,true]);
+        if(req.user.customData.item)
+          req.user.customData.item.push([form.data.activity,form.data.location,form.data.time1,true]);
+        else
+          req.user.customData.item=[[form.data.activity,form.data.location,form.data.time1,true]]
         //req.user.customData['anotherfield'] = {'json': 'data'};
         //req.user.customData.location = form.data.location;
         //req.user.customData.time1 = form.data.time1;
