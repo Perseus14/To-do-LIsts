@@ -1,0 +1,17 @@
+html
+  head
+    title=title
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+    div.container
+      div.jumbotron
+        h4 All your to-do lists are shown here
+        p Welcome, #{user.fullName}
+        p
+          if user.lists
+                Print List here
+          else
+                No Lists add some
+                a.btn.btn-primary(href="/add_data") Add Data  
+        a.btn.btn-primary(href="/logout") Logout
+        

@@ -1,0 +1,34 @@
+html
+  head
+    title="To-do List"
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+    div.container
+      div.jumbotron
+        p Welcome, #{user.fullName}
+        h4 All your to-do lists are shown here
+
+        p
+          if user.customData.item
+             each val in user.customData.item
+                 if val[3] == true
+                    div.class.panel-body
+                       a.class.list-group-item.panel.panel-success
+                         b What?:-#{val[0]}
+                           br
+                         b Where?:- #{val[1]}
+                           br
+                         b When?:- #{val[2]}
+                         //p #{user.customData.item.indexOf(val)}
+                         a.btn.btn-primary(href="/push") Push Item
+                         &nbsp
+                         //Find how to pass data from view to controller
+                         a.btn.btn-danger(href="/close") Close Item
+                    br
+          else
+                p No Items to show
+        a.btn.btn-primary(href="/add_data") Add Data
+        br
+        br
+        a.btn.btn-danger(href="/logout") Logout
+        

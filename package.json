@@ -1,0 +1,20 @@
+{
+  "name": "my-webapp",
+  "version": "1.0.0",
+  "description": "Website for new app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.1",
+    "csurf": "^1.8.3",
+    "express": "^4.13.4",
+    "express-stormpath": "^2.4.0",
+    "forms": "^1.1.4",
+    "jade": "^1.11.0",
+    "xtend": "^4.0.1"
+  }
+}
